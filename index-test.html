@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>各項手機介紹</title>
+  <link rel="icon" type="image/x-icon" href="img/4781226.webp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;font-family: Arial, Helvetica, sans-serif;}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<h2>各項手機品牌的優缺點</h2>
+<p>以下為SAMSUNG、apple、小米最新一代的手機評價</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'SAMSUNG')">SAMSUNG</button>
+  <button class="tablinks" onmouseover="openCity(event, 'apple')">apple</button>
+  <button class="tablinks" onmouseover="openCity(event, '小米')">小米</button>
+  <button class="tablinks" onmouseover="openCity(event, '總結')">總結</button>
+</div>
+
+<div id="SAMSUNG" class="tabcontent">
+  <h3>Galaxy S25 Ultra</h3>
+  <p>優點:擁有最新的AI技術，透過AI只需要用口語的對話說明，就能輕鬆完成日常工作。一早便可獲得當日的詳細報告
+    ，例如檢查你的最新身體能量指數，以及繁忙行程的提醒。然後，在晚上用日常活動洞察回顧當天的事件。</p>
+  <p>缺點:手機容易過熱，打遊戲時畫質不穩定</p>
+  <img src="img/gay.png" width="150" height="160">
+
+</div>
+
+<div id="apple" class="tabcontent">
+  <h3>iPhone 16 Pro Max</h3>
+  <p>優點:1. 顯示效果卓越
+    配備 6.9 吋 ProMotion 顯示器，支援 120Hz 高更新率，帶來流暢的滑動與動畫效果。 
+    2. 強大效能
+    搭載 A18 Pro 晶片，無論是日常使用、遊戲、或多工處理，都能提供順暢的體驗。</p> 
+    <P>缺點:1. Apple Intelligence 功能區域限制
+        部分 Apple Intelligence 功能目前僅在特定地區提供，可能無法在台灣完整體驗。2. 售價較高
+        起始價格為 NT$44,900，對於預算有限的消費者來說，可能需要考慮。</P>
+</div>
+
+<div id="小米" class="tabcontent">
+  <h3>Xiaomi 14 Ultra</h3>
+  <p>優點:沒有優點</p>
+  <p>缺點:鏡頭太醜、中國製造、隱私沒安全感、共產主義</p>
+</div>
+
+<div id="總結" class="tabcontent">
+    <h3>該選哪部手機</h3>
+    <p>答案:選SAMSUNG就對了</p>
+    <p>:D</p>
+    <img id="myImg" src="img/shit.jpg" alt="館長" style="width:100%;max-width:300px">                          
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+  </div>
+
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">更多</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">波羅手機</a>
+    <a href="#about">Google手機</a>
+    <a href="#contact">SONY手機</a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+   
+</body>
+</html> 
